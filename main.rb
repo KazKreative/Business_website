@@ -1,5 +1,6 @@
 require 'sinatra'
-require "sendgrid-ruby"
+require 'sendgrid-ruby'
+require 'slim'
 include SendGrid
 
 get "/layout" do   
@@ -23,9 +24,12 @@ get "/contact" do
   erb :contact 
 end
 
-
 get "/thank_you" do
   erb :thank_you
+end
+
+get "/star_date" do
+  slim :star_date
 end
 
 post "/contact" do

@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title><%= @contact %></title>
-</head>
-<body>
+
+
 
 <form method="post" action="/contact">
 	<input name="name" placeholder="What is your name?" class="name" required />
@@ -36,6 +32,7 @@ form {
     padding-bottom: 400px;
     position: relative;
     bottom: 180px;
+    z-index: -10
 }
 
 textarea{
@@ -121,7 +118,7 @@ input:focus, textarea:focus {
     -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
     box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
 	overflow: hidden; 
-}
+    }
 
 .btn {
 	width: 138px;
@@ -184,5 +181,3 @@ input:focus, textarea:focus {
 </style>
 
 
-</body>
-</html>

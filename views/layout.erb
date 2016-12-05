@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>Home Page</title>
 	<script type="text/javascript"></script>
-
 </head>
 <body>
 	
@@ -13,6 +12,7 @@
 	  <li><a href="gallery">Gallery</a></li>
 	  <li><a href="mission_risks">Mission</a></li>
 	  <li><a href="contact">Contact</a></li>
+	  <li><a href="star_date">Stars</a></li>
 	</ul>
 	
 	<div id = "logo"> 
@@ -20,7 +20,7 @@
 	</div>
 <footer>
 	<center>
-		<div id = "footerContent">555-555-8180  ©2016 BS Industries.  contact@BSindustries.com .</div>
+		<div id = "footerContent">555-555-8180  ©2016 PM Industries.  contact@PMindustries.com .</div>
 	</center>
 </footer>
 
@@ -28,7 +28,10 @@
     
 	
 	body {
-		background: url('https://s-media-cache-ak0.pinimg.com/originals/62/97/80/6297809324a8dd247e939b15e8a3872c.jpg')
+		background: url('https://s-media-cache-ak0.pinimg.com/originals/62/97/80/6297809324a8dd247e939b15e8a3872c.jpg');
+		margin: 0px auto;
+		background-size: cover;
+
 		}
 
 	#paragraph_top2 {
@@ -42,7 +45,7 @@
 	#paragraph_bottom {
 		font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 	  	width: 400px;
-	    color: blackness(0%);
+	    color: black;
 	    padding-left: 100px;
 	    padding-top: 200px;
 	    margin-left: 400px;
@@ -78,13 +81,15 @@
 		
 		}
 	#nav {
+		display: block;
 	    list-style-type: none;
-	    margin: 0;
+	    margin: 0 auto;
 	    padding: 0;
 	    overflow: hidden;
 	    background-color: #e2a668;
 	    height: 80px;
 	    border-bottom: solid red;
+
 		}
 
 	li {
@@ -110,6 +115,7 @@
 		position: relative;
 		top: -60px;
 		width: 300px;
+	
 		}
 
 		@media all and (max-width: 900px){
@@ -128,6 +134,9 @@
 
 
 </style>
+<script>
+
+</script>
     <%= yield %>
 </body>
 </html
