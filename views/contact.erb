@@ -1,15 +1,30 @@
 
 
+<!-- <h5><%= @msg %></h5> -->
+
 
 <form method="post" action="/contact">
 	<input name="name" placeholder="What is your name?" class="name" required />
 	<input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
     <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
     <input name="submit" class="btn" type="submit" value="Send" />
+    <br>
+    <br>
+    <h2><%= @msg %></h2>
 </form>
+
 <style>
 	@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
+h2 {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    margin-right: 80px;
+    margin-top: 60px;
+    color: #e2a668;
+    padding-left: 80px;
+    text-align: center;
+}
 
 form {
     margin-left:auto;
@@ -32,12 +47,12 @@ form {
     padding-bottom: 400px;
     position: relative;
     bottom: 180px;
-    z-index: -10
+    z-index: 0;
 }
 
 textarea{
-	  background: rgba(255, 255, 255, 0.4) url() 
-	  no-repeat scroll 16px 16px; 
+	background: rgba(255, 255, 255, 0.4) url() 
+	no-repeat scroll 16px 16px; 
     width: 276px;
     height: 110px;
     border: 1px solid rgba(255,255,255,.6);

@@ -33,27 +33,28 @@ get "/star_date" do
 end
 
 post "/contact" do
-  puts "SENDING EMAIL D:"
-  puts ENV['SENDGRID_API_KEY']
+  # p "My name is #{params[:name]} and I : #{params[:subject]}"
 
-  from = Email.new(email: 'test@example.com')
-  subject = 'Hello World from the SendGrid Ruby Library!'
+  p "SENDING EMAIL D:"
+  p ENV['SENDGRID_API_KEY']
+
+  from = Email.new(email: "#{params[:emailaddress]}")
+  subject = "My name is #{params[:name]}, and I want to be shot into space!:"
   to = Email.new(email: 'contact@redstarfilmsnc.com')
-  content = Content.new(type: 'text/plain', value: 'Hello, Email!')
+  content = Content.new(type: 'text/plain', value: "#{params[:subject]}")
   mail = Mail.new(from, subject, to, content)
-
   sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
   response = sg.client.mail._('send').post(request_body: mail.to_json)
+
   
-  puts response.status_code
-  puts response.body
-  puts response.headers
+  p response.status_code
+  p response.body
+  p response.headers
 
 
-	@title ="contact xyz"
-	puts params.inspect
-	@msg = "Thanks!"
+
+	p params.inspect
+	@msg = "Thanks #{params[:name]}! Your email has been sent."
 	erb :contact
-
-	puts "name" 
 end
+
