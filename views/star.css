@@ -1,3 +1,5 @@
+
+
 random(min, max)
   return floor(math(0, 'random')*(max - min + 1) + min)
 
@@ -55,3 +57,13 @@ body
   95%
     opacity 1
     box-shadow 0 0 2px white, 0 0 4px white
+
+canvas {
+  vertical-align: top;
+  cursor: pointer;
+}
+
+
+
+
+
